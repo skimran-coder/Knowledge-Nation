@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
+import { YOUTUBE_URL } from "../../Constant";
 
 const Hero = () => {
   return (
@@ -17,7 +18,9 @@ const Hero = () => {
           </p>
           <div className="">
             <a
-              href="https://www.youtube.com/@knowledgenationkolkata"
+              href={YOUTUBE_URL}
+              target="_blank"
+              rel="noreferrer"
               className="bg-[#20AD94] px-4 py-2 text-white text-opacity-80 text-sm"
             >
               <FontAwesomeIcon icon={faExclamationCircle} className=" pr-2" />

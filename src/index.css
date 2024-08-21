@@ -37,3 +37,61 @@ code {
     background-position: 0% 50%;
   }
 }
+
+/* General error message styling */
+.error-message {
+  color: #D8000C; /* Red color for error text */
+  background-color: #FFBABA; /* Light red background for contrast */
+  padding: 5px 10px; /* Some padding around the text */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 0.875rem; /* Slightly smaller font size */
+  margin-top: 5px; /* Space between input and error message */
+  animation: fadeIn 0.3s ease-in-out; /* Smooth fade-in animation */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+.fixed {
+  position: fixed;
+}
+
+.inset-0 {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.z-40 {
+  z-index: 40;
+}
+
+.z-50 {
+  z-index: 50;
+}
+
+.bg-opacity-50 {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.fixed {
+  position: fixed;
+}
+
+.bottom-4 {
+  bottom: 2rem; /* Adjust spacing from the bottom */
+}
+
+.right-4 {
+  right: 2rem; /* Adjust spacing from the right */
+}
+
