@@ -5,7 +5,7 @@ import Header from './Components/Header';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SectionPage from './Components/SectionPage';
 import ErrorPage from './Components/ErrorPage'
-import WhatsAppButton from './Components/WhatsAppButton';
+import WhatsAppButton from './Components/WhatsAppButton'
 
 function App() {
   return (

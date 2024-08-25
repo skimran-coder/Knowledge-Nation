@@ -26,7 +26,7 @@ const ContactUs = () => {
           allowFullScreen=""
           loading="lazy"
         ></iframe>
-        <p className="text-lg">123 Knowledge Street, Topsia, Kolkata, 700107</p>
+        <p className="text-lg">ROOM NO.102, AASHIYANA APARTMENT, 59C, Gulam Jilani Khan Rd, Block k, Topsia, Kolkata, West Bengal 700039</p>
       </div>
 
         {/* Contact form */}

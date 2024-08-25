@@ -59,39 +59,21 @@ code {
   }
 }
 
-
-.fixed {
-  position: fixed;
+/* sidebar */
+.sidebar-enter {
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-out;
 }
 
-.inset-0 {
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+.sidebar-enter-active {
+  transform: translateX(0);
 }
 
-.z-40 {
-  z-index: 40;
+.sidebar-exit {
+  transform: translateX(0);
+  transition: transform 0.3s ease-out;
 }
 
-.z-50 {
-  z-index: 50;
+.sidebar-exit-active {
+  transform: translateX(-100%);
 }
-
-.bg-opacity-50 {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.fixed {
-  position: fixed;
-}
-
-.bottom-4 {
-  bottom: 2rem; /* Adjust spacing from the bottom */
-}
-
-.right-4 {
-  right: 2rem; /* Adjust spacing from the right */
-}
-

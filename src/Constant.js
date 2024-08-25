@@ -10,4 +10,4 @@ export const YOUTUBE_URL = "https://www.youtube.com/@knowledgenationkolkata"
 
 export const INSTAGRAM_URL = "https://www.instagram.com/knowledge_nation_525?igshid=YmMyMTA2M2Y%3D"
 
-export const FACEBOOK_URL = "https://www.facebook.com/groups/2506144766204763/user/100079780997818/"
+export const FACEBOOK_URL = "https://www.facebook.com/profile.php?id=100079780997818"

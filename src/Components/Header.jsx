@@ -22,21 +22,22 @@ const TopLayer = () => {
             <p className="text-xs md:text-sm">59C GULAM JILANI KHAN ROAD</p>
           </div>
         </div>
-        <Icons/>
+        <Icons />
       </div>
     </div>
   );
 };
 
-const BottomLayer = ({ onMenuClick }) => {
+const BottomLayer = ({ handleSidebar }) => {
   const { pathname } = useLocation();
-  
 
   return (
     <div className="md:w-3/4 w-full m-auto  flex items-center justify-between">
-      <button className="sm:hidden p-8" onClick={onMenuClick}>
-          <FontAwesomeIcon icon={faBars} className="text-2xl" />
-        </button>
+      <FontAwesomeIcon
+        icon={faBars}
+        className="text-2xl sm:hidden pl-4"
+        onClick={handleSidebar}
+      />
 
       <div className="sm:w-20 w-16">
         <a href="/">
@@ -121,21 +122,17 @@ const BottomLayer = ({ onMenuClick }) => {
 };
 
 const Header = () => {
-  const [isSidebarOpen, setSidebarOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  const handleMenuClick = () => {
-    setSidebarOpen(true);
-  };
-
-  const handleCloseSidebar = () => {
-    setSidebarOpen(false);
+  const handleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
   };
 
   return (
     <header className="w-screen flex flex-col">
       <TopLayer />
-      <BottomLayer onMenuClick={handleMenuClick} />
-      <Sidebar isOpen={isSidebarOpen} onClose={handleCloseSidebar} />
+      <BottomLayer handleSidebar={handleSidebar} />
+      <Sidebar isSidebarOpen={isSidebarOpen} handleSidebar={handleSidebar} />
     </header>
   );
 };

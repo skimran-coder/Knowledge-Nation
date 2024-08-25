@@ -40,7 +40,7 @@ const ContactForm = () => {
     validate,
     onSubmit: (values) => {
       // Create the mailto link
-      const mailtoLink = `mailto:skimranloco@gmail.com?subject=Contact from ${
+      const mailtoLink = `mailto:knowledgenation525@gmail.com?subject=Contact from ${
         values.fName
       } for: ${values.subject}&body=${encodeURIComponent(
         values.message
@@ -109,7 +109,9 @@ const ContactForm = () => {
         <div className="error-message">{formik.errors.message}</div>
       ) : null}
 
-      <button type="submit" className="bg-[#20AD94] text-white p-2 rounded">Submit</button>
+      <button type="submit" className="bg-[#20AD94] text-white p-2 rounded">
+        Submit
+      </button>
     </form>
   );
 };

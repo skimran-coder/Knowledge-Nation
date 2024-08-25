@@ -25,7 +25,7 @@ const Footer = () => {
 
           <div className="flex gap-2 items-center ">
             <FontAwesomeIcon icon={faEnvelope} className=" text-[#20AD94]" />
-            <p className="text-xs md:text-sm"> demo@gmail.com </p>
+            <p className="text-xs md:text-sm"> knowledgenation525@gmail.com </p>
           </div>
         </div>
 

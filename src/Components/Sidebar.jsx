@@ -1,66 +1,53 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
-import { useLocation } from "react-router-dom";
+import React, { useEffect, useState } from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTimes } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 
-const Sidebar = ({ isOpen, onClose }) => {
-  const { pathname } = useLocation();
+
+const Sidebar = ({isSidebarOpen, handleSidebar}) => {
+const {pathname} = useLocation()
+
+const [sidebarClass, setSidebarClass] = useState('sidebar-exit');
+
+useEffect(() => {
+  if (isSidebarOpen) {
+    setSidebarClass('sidebar-enter sidebar-enter-active');
+  } else {
+    setSidebarClass('sidebar-exit sidebar-exit-active');
+  }
+}, [isSidebarOpen]);
 
   return (
-    <>
-      {isOpen && (
-        <>
-          <div className="fixed inset-0 bg-black bg-opacity-50 z-40" onClick={onClose}></div>
-          <div className="fixed top-0 left-0 h-full w-64 bg-white z-50 p-4">
-            <button
-              onClick={onClose}
-              className="text-2xl absolute top-4 right-4"
-            >
-              <FontAwesomeIcon icon={faTimes} />
-            </button>
-            <nav className="mt-16">
-              <ul className="flex flex-col gap-4 text-base font-semibold">
-                <li>
-                  <Link
-                    to="/"
-                    className={`${
-                      pathname === "/" ? "text-[#20AD94]" : ""
-                    }`}
-                    onClick={onClose}
-                  >
-                    Home
+    
+      <>
+      { isSidebarOpen && 
+        <div className='fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 z-10' >
+        <div className={`bg-white w-1/2 h-full z-20 ${sidebarClass}`}>
+            <div className='p-4 flex flex-col items-end'>
+              <FontAwesomeIcon icon={faTimes} className='text-2xl' onClick={handleSidebar}/>
+            </div>
+              <hr className='w-full bg-black'></hr>
+              <nav>
+                <ul className='mt-8 px-4 flex flex-col gap-4 font-semibold'>
+                  <Link to={"/"}>
+                  <li className={pathname === "/" ? "text-myGreen" : ""} onClick={handleSidebar}>Home</li>
                   </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/about"
-                    className={`${
-                      pathname === "/about" ? "text-[#20AD94]" : ""
-                    }`}
-                    onClick={onClose}
-                  >
-                    About Us
+                  <Link to={"/about"}>
+                  <li className={pathname === "/about" ? "text-myGreen" : ""} onClick={handleSidebar}>About Us</li>
                   </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/contact"
-                    className={`${
-                      pathname === "/contact" ? "text-[#20AD94]" : ""
-                    }`}
-                    onClick={onClose}
-                  >
-                    Contact Us
+                  <Link to={"/contact"}>
+                  <li className={pathname === "/contact" ? "text-myGreen" : ""} onClick={handleSidebar}>Contact Us</li>
                   </Link>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </>
-      )}
-    </>
-  );
-};
+                </ul>
+              </nav>
+        </div>
+      </div>
+      }
+      </>
+    
+    
+  )
+}
 
-export default Sidebar;
+export default Sidebar
