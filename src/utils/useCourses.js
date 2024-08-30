@@ -29,6 +29,7 @@ const useCourses = () => {
               `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet,contentDetails&playlistId=${data.playlistId}&maxResults=50&key=${process.env.REACT_APP_YOUTUBE_API}`
             );
             const json = await response.json();
+            console.log(json)
             updateCourse(data?.id, {
               items: json?.items,
             });
