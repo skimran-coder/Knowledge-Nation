@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import SectionPage from './Components/SectionPage';
 import ErrorPage from './Components/ErrorPage'
 import WhatsAppButton from './Components/WhatsAppButton'
+import Admin from './Components/Admin';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Body/>} />
           <Route path="/:sectionId" element={<SectionPage/>} />
+          <Route path='/admin' element={<Admin/>} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>
       <Footer/>

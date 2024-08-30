@@ -1,7 +1,7 @@
 import React from "react";
 import Underline from "../DesignElement/Underline";
 import { LOCATION_URL } from "../../Constant";
-import ContactForm from "../ContactForm";
+import ContactForm from "./ContactForm";
 
 const ContactUs = () => {
   return (

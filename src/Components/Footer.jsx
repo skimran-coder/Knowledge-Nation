@@ -2,7 +2,7 @@ import { faLocationArrow, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import React from "react";
-import Icons from "./Icons";
+import Icons from "./Sections/Icons";
 
 const Footer = () => {
   return (

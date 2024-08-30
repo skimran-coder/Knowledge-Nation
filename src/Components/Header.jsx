@@ -5,7 +5,7 @@ import { faPhoneVolume } from "@fortawesome/free-solid-svg-icons";
 import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { useLocation } from "react-router-dom";
-import Icons from "./Icons";
+import Icons from "./Sections/Icons";
 import Sidebar from "./Sidebar";
 
 const TopLayer = () => {
