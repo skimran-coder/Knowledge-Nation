@@ -2,9 +2,12 @@ import { collection, getDocs } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { db } from "./firebase";
 import updateCourse from "./updateCourses";
+import { useDispatch } from "react-redux";
+import { addCourses } from "./courseSlice";
 
 const useCourses = () => {
   const [playlistData, setPlaylistData] = useState([]);
+  const dispatch = useDispatch
 
   // fetch playlist id from firestore
   useEffect(() => {
@@ -29,7 +32,6 @@ const useCourses = () => {
               `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet,contentDetails&playlistId=${data.playlistId}&maxResults=50&key=${process.env.REACT_APP_YOUTUBE_API}`
             );
             const json = await response.json();
-            console.log(json)
             updateCourse(data?.id, {
               items: json?.items,
             });

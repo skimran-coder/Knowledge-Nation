@@ -33,6 +33,9 @@ useEffect(() => {
                   <Link to={"/"}>
                   <li className={pathname === "/" ? "text-myGreen" : ""} onClick={handleSidebar}>Home</li>
                   </Link>
+                  <Link to={"/courses"}>
+                  <li className={pathname.includes("courses") ? "text-myGreen" : ""} onClick={handleSidebar}>Courses</li>
+                  </Link>
                   <Link to={"/about"}>
                   <li className={pathname === "/about" ? "text-myGreen" : ""} onClick={handleSidebar}>About Us</li>
                   </Link>

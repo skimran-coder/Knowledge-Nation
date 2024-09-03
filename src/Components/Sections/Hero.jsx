@@ -18,8 +18,7 @@ const Hero = () => {
           </p>
           <div className="">
             <a
-              href={YOUTUBE_URL}
-              target="_blank"
+              href="#courses"
               rel="noreferrer"
               className="bg-[#20AD94] px-4 py-2 text-white text-opacity-80 text-sm"
             >

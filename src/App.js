@@ -7,6 +7,7 @@ import SectionPage from './Components/SectionPage';
 import ErrorPage from './Components/ErrorPage'
 import WhatsAppButton from './Components/WhatsAppButton'
 import Admin from './Components/Admin';
+import CourseDetails from './Components/Sections/CourseDetails';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Body/>} />
           <Route path="/:sectionId" element={<SectionPage/>} />
+          <Route path="/courses/:courseName" element={<CourseDetails/>} />
           <Route path='/admin' element={<Admin/>} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>

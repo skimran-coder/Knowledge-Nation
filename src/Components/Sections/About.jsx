@@ -9,11 +9,11 @@ const About = () => {
           <div className="w-1 h-12 bg-[#20AD94]"></div>
           <h2 className="lg:text-4xl text-3xl font-bold">About Us</h2>
         </div>
-        <div className="w-full 2xl:text-lg pt-4">
-          <p className="pb-2">{ABOUT_US_TEXT_PARA_1}</p>
-          <p className="pb-2">{ABOUT_US_TEXT_PARA_2}</p>
+        <div className="w-full flex flex-col sm:gap-6 lg:gap-8 gap-4 pt-4">
+          <p className="text-sm xl:text-base">{ABOUT_US_TEXT_PARA_1}</p>
+          <p className="text-sm xl:text-base">{ABOUT_US_TEXT_PARA_2}</p>
           {
-            window.innerWidth > 640 && <p>{ABOUT_US_TEXT_PARA_3}</p>
+            window.innerWidth > 640 && <p className="text-sm xl:text-base">{ABOUT_US_TEXT_PARA_3}</p>
           } 
         </div>
       </div>

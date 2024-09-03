@@ -32,7 +32,7 @@ const BottomLayer = ({ handleSidebar }) => {
   const { pathname } = useLocation();
 
   return (
-    <div className="md:w-3/4 w-full m-auto  flex items-center justify-between">
+    <div className="lg:w-3/4 w-full m-auto  flex items-center justify-between">
       <FontAwesomeIcon
         icon={faBars}
         className="text-2xl sm:hidden pl-4"
@@ -69,6 +69,26 @@ const BottomLayer = ({ handleSidebar }) => {
 
           <li className="flex flex-col items-center">
             <Link
+              to="/courses"
+              className={`${
+                pathname.includes("/courses")
+                  ? "text-[#20AD94] transition-colors duration-200 ease-in-out"
+                  : ""
+              }`}
+            >
+              Courses
+            </Link>
+            <div
+              className={`${
+                pathname.includes("/courses")
+                  ? "w-20 h-1 bg-[#20AD94] transition-colors duration-500 ease-in-out"
+                  : ""
+              }`}
+            ></div>
+          </li>
+
+          <li className="flex flex-col items-center">
+            <Link
               to="/about"
               className={`${
                 pathname === "/about"
@@ -88,6 +108,7 @@ const BottomLayer = ({ handleSidebar }) => {
           </li>
 
           <li className="flex flex-col items-center">
+            
             <Link
               to="/contact"
               className={`${
@@ -105,7 +126,9 @@ const BottomLayer = ({ handleSidebar }) => {
                   : ""
               }`}
             ></div>
+
           </li>
+          
         </ul>
       </nav>
 

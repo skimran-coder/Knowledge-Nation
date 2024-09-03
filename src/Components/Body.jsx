@@ -8,9 +8,9 @@ const Body = () => {
   return (
     <main>
       <Hero />
+      <Courses />
       <About />
       <Contact />
-      <Courses />
     </main>
   );
 };

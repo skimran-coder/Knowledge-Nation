@@ -1,18 +1,21 @@
 import { collection, getDocs } from "firebase/firestore";
 import { useEffect } from "react";
 import { db } from "./firebase";
+import { addCourses } from "./courseSlice";
+import { useDispatch } from "react-redux";
 
-const useDisplayCourses = (setCourses) => {
+const useDisplayCourses = () => {
+  const dispatch = useDispatch()
+
   useEffect(() => {
     const fetchCourses = async () => {
       try {
         const querySnapshot = await getDocs(collection(db, "courses"));
-        // console.log(querySnapshot);
         const coursesList = querySnapshot?.docs?.map((doc) => ({
           id: doc.id,
           ...doc.data(),
         }));
-        setCourses(coursesList);
+        dispatch(addCourses(coursesList))
       } catch (error) {
         console.error("Error fetching courses: ", error);
       }
