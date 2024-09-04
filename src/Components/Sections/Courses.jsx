@@ -13,7 +13,7 @@ const Courses = () => {
 
   return (
 
-    <div className="w-3/4 mx-auto my-12" id="courses">
+    <div className="w-3/4 min-h-[75vh] mx-auto my-12" id="courses">
 
     <div className="flex items-center flex-col mb-8">
     <h1 className="text-4xl font-bold">Our Courses</h1>

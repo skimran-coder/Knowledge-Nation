@@ -15,7 +15,7 @@ const CoursesCard = ({ course }) => {
             className="w-full"
           />
         </div>
-        <div className="pl-2 flex flex-col gap-2">
+        <div className="px-2  flex flex-col gap-2">
           <h2 className=" text-lg font-semibold text-gray-800">{courseName}</h2>
           <p className="text-gray-600 text-sm line-clamp-2">
             {course?.courseDesc}
