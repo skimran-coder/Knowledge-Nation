@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# Knowledge Nation v.2
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Knowledge Nation v.2** is a full-stack EdTech web application developed for a coaching institute. The platform serves as a comprehensive educational portal, offering video streaming services, course management, and a range of features to enhance the learning experience for students. The application is currently deployed in production and serves as a digital extension of the institute’s educational offerings.
 
-## Available Scripts
+## Key Features
 
-In the project directory, you can run:
+- **Video Streaming**: Stream course videos directly from the platform with a YouTube integration.
+- **Course Management**: Dynamic courses with CRUD functionality, allowing the admin to manage course content efficiently.
+- **Responsive Design**: Optimized for both desktop and mobile devices, ensuring a seamless user experience across all screen sizes.
+- **Engaging UI**: An animated gradient background and a modern design aesthetic to make learning more engaging.
+- **Firebase Integration**: Real-time database management and data storage using Firestore.
 
-### `npm start`
+## Tech Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend**: React.js, Redux, Tailwind CSS
+- **Backend**: Firestore (Firebase)
+- **Deployment**: [Your Deployment Platform]
+- **API Integration**: YouTube Data API for fetching and displaying video content
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project Structure
 
-### `npm test`
+- **Components**:
+  - `Hero`, `About`, `Courses`, `Contact`: Core sections of the website, each dynamically loading content.
+  - `CourseVideoPlayer`: Displays the selected video and lists other available videos in the course.
+  - `CoursesCard`, `VideosList`: Modular components used across the application to display course and video information.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **State Management**: 
+  - Managed via Redux for consistent and predictable state management across the application.
+  - Course data is fetched and stored in the Redux store for quick access and reusability.
 
-### `npm run build`
+## Deployment
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The application is deployed in production, providing a live environment for the coaching institute's students to access their courses and content. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Note
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This application relies on environment variables for Firebase configuration, making it impossible to run locally without proper credentials. As this is a proprietary project for a specific coaching institute, cloning and running the project locally is not supported.
 
-### `npm run eject`
+## Future Enhancements
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Authentication & Security**: Implementing secure access to courses and personalized content through authentication mechanisms.
+- **Payment Integration**: Implementing payment gateways for course enrollments.
+- **Advanced Analytics**: Integration with analytics tools to track user engagement and performance.
