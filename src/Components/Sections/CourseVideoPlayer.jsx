@@ -30,7 +30,7 @@ const CourseVideoPlayer = () => {
           <p className="text-gray-600">{video?.snippet?.description}</p>
         </div>
 
-        <div className="col-span-2 bg-white p-6 rounded-lg shadow-lg overflow-y-auto max-h-[75vh]">
+        <div className="col-span-4 md:col-span-2 w-full bg-white p-4 md:p-6 rounded-lg shadow-lg overflow-y-auto max-h-[75vh]">
           <h3 className="text-xl font-semibold text-gray-700 mb-4">
             More Videos
           </h3>
