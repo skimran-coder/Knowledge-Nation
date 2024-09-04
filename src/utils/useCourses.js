@@ -3,11 +3,11 @@ import { useEffect, useState } from "react";
 import { db } from "./firebase";
 import updateCourse from "./updateCourses";
 import { useDispatch } from "react-redux";
-import { addCourses } from "./courseSlice";
+import { addCourses } from "./redux/courseSlice";
 
 const useCourses = () => {
   const [playlistData, setPlaylistData] = useState([]);
-  const dispatch = useDispatch
+  const dispatch = useDispatch;
 
   // fetch playlist id from firestore
   useEffect(() => {

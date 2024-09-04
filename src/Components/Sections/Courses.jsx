@@ -9,7 +9,7 @@ const Courses = () => {
   useCourses();
   useDisplayCourses();
 
-  const courses = useSelector((state) => state.courses.videos);
+  const courses = useSelector((state) => state.courses.courseData);
 
   return (
 

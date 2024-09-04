@@ -8,6 +8,7 @@ import ErrorPage from './Components/ErrorPage'
 import WhatsAppButton from './Components/WhatsAppButton'
 import Admin from './Components/Admin';
 import CourseDetails from './Components/Sections/CourseDetails';
+import CourseVideoPlayer from './Components/Sections/CourseVideoPlayer';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path='/' element={<Body/>} />
           <Route path="/:sectionId" element={<SectionPage/>} />
           <Route path="/courses/:courseName" element={<CourseDetails/>} />
+          <Route path="/courses/:courseName/:videoTitle" element={<CourseVideoPlayer/>} />
           <Route path='/admin' element={<Admin/>} />
           <Route path="*" element={<ErrorPage />} />
         </Routes>

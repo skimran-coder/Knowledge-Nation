@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const CoursesCard = ({ course }) => {
-  const courseName = course.courseName;
+  const courseName = course?.courseName;
+  const courseNameParam = courseName?.split(" ").join("-")
 
   return (
     course?.items && (
@@ -15,9 +16,7 @@ const CoursesCard = ({ course }) => {
           />
         </div>
         <div className="pl-2 flex flex-col gap-2">
-          <h2 className=" text-lg font-semibold text-gray-800">
-            {course?.courseName}
-          </h2>
+          <h2 className=" text-lg font-semibold text-gray-800">{courseName}</h2>
           <p className="text-gray-600 text-sm line-clamp-2">
             {course?.courseDesc}
           </p>
@@ -35,8 +34,9 @@ const CoursesCard = ({ course }) => {
           </div>
         </div>
         <Link
-          to={`/courses/${courseName}`}
+          to={`/courses/${courseNameParam}`}
           className="bg-myGreen text-white text-sm font-medium py-2 hover:bg-myGreenDarker transition-colors text-center"
+          state={{course}}
         >
           <button className="">View Course</button>
         </Link>

@@ -3,7 +3,7 @@ import courseSlice from './courseSlice';
 
 const appStore = configureStore({
   reducer: {
-    courses: courseSlice
+    courses: courseSlice 
   },
 })
 
