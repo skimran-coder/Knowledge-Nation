@@ -9,10 +9,10 @@ const VideosList = ({ video }) => {
     .split(" ")
     .filter((text) => !text.includes("#"))
     .join(" ");
-  const videoTitleParam = videoTitle.split(" ").join("-")
+  const videoTitleParam = videoTitle.split(" ").join("-");
 
   return (
-    <Link to={`/courses/${courseName}/${videoTitleParam}`} state={{video}}>
+    <Link to={`/courses/${courseName}/${videoTitleParam}`} state={{ video }}>
       <div className="flex items-center px-4 py-3 hover:bg-gray-100 cursor-pointer transition-colors duration-200 rounded-lg gap-4">
         <div className="text-myGreen text-lg">
           <FontAwesomeIcon icon={faVideo}></FontAwesomeIcon>
