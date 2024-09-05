@@ -60,7 +60,7 @@ const ContactForm = () => {
         onBlur={formik.handleBlur}
         value={formik.values.fName}
         placeholder="Your Name*"
-        className="p-2 border border-gray-300 rounded"
+        className="p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-myOrange"
       />
       {formik.touched.fName && formik.errors.fName ? (
         <div className="error-message">{formik.errors.fName}</div>
@@ -74,7 +74,7 @@ const ContactForm = () => {
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
         value={formik.values.email}
-        className="p-2 border border-gray-300 rounded"
+        className="p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-myOrange"
       />
       {formik.touched.email && formik.errors.email ? (
         <div className="error-message">{formik.errors.email}</div>
@@ -88,7 +88,7 @@ const ContactForm = () => {
         onBlur={formik.handleBlur}
         value={formik.values.subject}
         placeholder="Subject*"
-        className="p-2 border border-gray-300 rounded"
+        className="p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-myOrange"
       />
       {formik.touched.subject && formik.errors.subject ? (
         <div className="error-message">{formik.errors.subject}</div>
@@ -102,15 +102,18 @@ const ContactForm = () => {
         onBlur={formik.handleBlur}
         value={formik.values.message}
         placeholder="Your Message*"
-        className="p-2 border border-gray-300 rounded"
+        className="p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-myOrange "
         rows="4"
       ></textarea>
       {formik.touched.message && formik.errors.message ? (
         <div className="error-message">{formik.errors.message}</div>
       ) : null}
 
-      <button type="submit" className="bg-[#20AD94] text-white p-2 rounded">
-        Submit
+      <button
+        type="submit"
+        className="bg-myOrange text-white hover:text-myOrange hover:border border-myOrange relative z-10 p-2 rounded shadow-lg transition-all send"
+      >
+        Send
       </button>
     </form>
   );

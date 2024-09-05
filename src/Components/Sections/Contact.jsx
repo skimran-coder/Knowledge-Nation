@@ -9,7 +9,7 @@ const ContactUs = () => {
       
       <div className="flex flex-col items-center pb-20">
         <h2 className="text-4xl font-bold">Contact Us</h2>
-        <Underline/>
+        <Underline bgColor={"bg-myOrange"}/>
         <p className="text-gray-600 text-sm">Have Questions? We're Just a Message Away.</p>
       </div>
 

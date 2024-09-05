@@ -10,7 +10,7 @@ import Sidebar from "./Sidebar";
 
 const TopLayer = () => {
   return (
-    <div className="w-full px-2 bg-[#20AD94] py-1  ">
+    <div className="w-full px-2 bg-myGreen py-1  ">
       <div className="sm:w-4/5 w-full m-auto flex justify-between items-center">
         <div className="flex flex-wrap md:flex-nowrap md:gap-8 gap-2 text-white opacity-80 text-sm">
           <div className="flex gap-2 items-center ">
@@ -52,7 +52,7 @@ const BottomLayer = ({ handleSidebar }) => {
               to="/"
               className={`${
                 pathname === "/"
-                  ? "text-[#20AD94] transition-colors duration-200 ease-in-out"
+                  ? "text-myGreen transition-colors duration-200 ease-in-out"
                   : ""
               }`}
             >
@@ -61,7 +61,7 @@ const BottomLayer = ({ handleSidebar }) => {
             <div
               className={`${
                 pathname === "/"
-                  ? "w-12 h-1 bg-[#20AD94] transition-colors duration-500 ease-in-out"
+                  ? "w-12 h-1 bg-myGreen transition-colors duration-500 ease-in-out"
                   : ""
               }`}
             ></div>
@@ -72,7 +72,7 @@ const BottomLayer = ({ handleSidebar }) => {
               to="/courses"
               className={`${
                 pathname.includes("/courses")
-                  ? "text-[#20AD94] transition-colors duration-200 ease-in-out"
+                  ? "text-myGreen transition-colors duration-200 ease-in-out"
                   : ""
               }`}
             >
@@ -81,7 +81,7 @@ const BottomLayer = ({ handleSidebar }) => {
             <div
               className={`${
                 pathname.includes("/courses")
-                  ? "w-20 h-1 bg-[#20AD94] transition-colors duration-500 ease-in-out"
+                  ? "w-20 h-1 bg-myGreen transition-colors duration-500 ease-in-out"
                   : ""
               }`}
             ></div>
@@ -92,7 +92,7 @@ const BottomLayer = ({ handleSidebar }) => {
               to="/about"
               className={`${
                 pathname === "/about"
-                  ? "text-[#20AD94] transition-colors duration-200 ease-in-out"
+                  ? "text-myGreen transition-colors duration-200 ease-in-out"
                   : ""
               }`}
             >
@@ -101,19 +101,18 @@ const BottomLayer = ({ handleSidebar }) => {
             <div
               className={`${
                 pathname === "/about"
-                  ? "w-20 h-1 bg-[#20AD94] transition-colors duration-500 ease-in-out"
+                  ? "w-20 h-1 bg-myGreen transition-colors duration-500 ease-in-out"
                   : ""
               }`}
             ></div>
           </li>
 
           <li className="flex flex-col items-center">
-            
             <Link
               to="/contact"
               className={`${
                 pathname === "/contact"
-                  ? "text-[#20AD94] transition-colors duration-200 ease-in-out"
+                  ? "text-myGreen transition-colors duration-200 ease-in-out"
                   : ""
               }`}
             >
@@ -122,23 +121,21 @@ const BottomLayer = ({ handleSidebar }) => {
             <div
               className={`${
                 pathname === "/contact"
-                  ? "w-24 h-1 bg-[#20AD94] transition-colors duration-500 ease-in-out"
+                  ? "w-24 h-1 bg-myGreen transition-colors duration-500 ease-in-out"
                   : ""
               }`}
             ></div>
-
           </li>
-          
         </ul>
       </nav>
 
       {/* mobile */}
 
-      <div className="bg-[#FE4C1B] mr-4 md:mr-12 my-2 px-2 py-2 sm:px-6 sm:py-3 flex items-center">
-        <a href="tel:+918334835908" className=" text-white text-sm">
-          Join Now{" "}
+      <div className="bg-myOrange hover:border border-myOrange relative z-10 group send mr-4 md:mr-12 my-2 px-2 py-2 sm:px-6 sm:py-3 flex items-center cursor-pointer">
+        <a href="tel:+918334835908" className=" text-white group-hover:text-myOrange text-sm">
+          Join Now
         </a>
-        <FontAwesomeIcon icon={faPhoneVolume} className="text-white pl-2" />
+        <FontAwesomeIcon icon={faPhoneVolume} className="text-white group-hover:text-myOrange pl-2" />
       </div>
     </div>
   );

@@ -17,7 +17,7 @@ const Courses = () => {
 
     <div className="flex items-center flex-col mb-8">
     <h1 className="text-4xl font-bold">Our Courses</h1>
-    <Underline/>
+    <Underline bgColor={"bg-myGreen"}/>
     <p className="text-gray-600 text-sm">Explore our classes for free.</p>
     </div>
     

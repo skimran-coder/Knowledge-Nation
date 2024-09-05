@@ -48,7 +48,7 @@ const AdminForm = () => {
   }, [newCourseData]);
 
   return (
-    <div className="w-2/4 mx-auto my-8 ">
+    <div className="w-3/4 md:w-2/4 mx-auto my-8 ">
       <h1 className="text-lg font-bold">Add Courses</h1>
 
       <form
@@ -104,7 +104,7 @@ const AdminForm = () => {
 
         <button
           onClick={clickHandler}
-          className="bg-[#20AD94] text-white p-2 rounded"
+          className="bg-myGreen text-white p-2 rounded"
         >
           ADD COURSE
         </button>

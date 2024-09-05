@@ -7,7 +7,9 @@ module.exports = {
     extend: {
       colors:{
         myGreen: "#20AD94",
-        myGreenDarker: "#1A8A76"
+        myGreenDarker: "#1A8A76",
+        myOrange: "#FE4C1B",
+        myOrangeDarker: "#D84418"
       }
     },
   },
