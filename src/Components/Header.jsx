@@ -101,7 +101,7 @@ const BottomLayer = ({ handleSidebar }) => {
             <div
               className={`${
                 pathname === "/about"
-                  ? "w-20 h-1 bg-myGreen transition-colors duration-500 ease-in-out"
+                  ? "w-24 h-1 bg-myGreen transition-colors duration-500 ease-in-out"
                   : ""
               }`}
             ></div>
@@ -121,7 +121,7 @@ const BottomLayer = ({ handleSidebar }) => {
             <div
               className={`${
                 pathname === "/contact"
-                  ? "w-24 h-1 bg-myGreen transition-colors duration-500 ease-in-out"
+                  ? "w-28 h-1 bg-myGreen transition-colors duration-500 ease-in-out"
                   : ""
               }`}
             ></div>
@@ -131,11 +131,11 @@ const BottomLayer = ({ handleSidebar }) => {
 
       {/* mobile */}
 
-      <div className="bg-myOrange hover:border border-myOrange relative z-10 group send mr-4 md:mr-12 my-2 px-2 py-2 sm:px-6 sm:py-3 flex items-center cursor-pointer">
-        <a href="tel:+918334835908" className=" text-white group-hover:text-myOrange text-sm">
+      <div className="bg-myOrange border-myOrange relative z-10 group send mr-4 md:mr-12 my-2 px-2 py-2 sm:px-6 sm:py-3 flex items-center cursor-pointer transition-all duration-200 ease-in-out border">
+        <a href="tel:+918334835908" className=" text-white group-hover:text-myOrange text-sm transition-all duration-200 ease-in-out">
           Join Now
         </a>
-        <FontAwesomeIcon icon={faPhoneVolume} className="text-white group-hover:text-myOrange pl-2" />
+        <FontAwesomeIcon icon={faPhoneVolume} className="text-white group-hover:text-myOrange pl-2 transition-all duration-200 ease-in-out" />
       </div>
     </div>
   );

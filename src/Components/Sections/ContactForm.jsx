@@ -1,5 +1,7 @@
 import React from "react";
 import { useFormik } from "formik";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 
 const validate = (values) => {
   const errors = {};
@@ -111,9 +113,9 @@ const ContactForm = () => {
 
       <button
         type="submit"
-        className="bg-myOrange text-white hover:text-myOrange hover:border border-myOrange relative z-10 p-2 rounded shadow-lg transition-all send"
+        className="bg-myOrange text-white hover:text-myOrange border border-myOrange relative z-10 p-2 rounded shadow-lg transition-all duration-200 ease-in-out send group"
       >
-        Send
+        <FontAwesomeIcon icon={faPaperPlane} className="text-white group-hover:text-myOrange pl-2 transition-all duration-200 ease-in-out" /> Send
       </button>
     </form>
   );
