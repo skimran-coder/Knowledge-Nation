@@ -27,7 +27,7 @@ useEffect(() => {
             <div className='p-4 flex flex-col items-end'>
               <FontAwesomeIcon icon={faTimes} className='text-2xl' onClick={handleSidebar}/>
             </div>
-              <hr className='w-full bg-black'></hr>
+              <hr className='w-full bg-gray-50'></hr>
               <nav>
                 <ul className='mt-8 px-4 flex flex-col gap-4 font-semibold'>
                   <Link to={"/"}>

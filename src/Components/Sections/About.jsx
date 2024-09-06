@@ -7,11 +7,12 @@ import {
 
 const About = () => {
   return (
-    <div className="w-3/4 pb-20 mx-auto flex flex-wrap items-center justify-between gap-8 lg:gap-0">
+    <div className="w-screen bg-gray-100 border-b-2">
+      <div className="w-3/4 pb-20 mx-auto flex flex-wrap items-center justify-between gap-8 lg:gap-0">
       <div className="2xl:w-[620px] xl:w-[512px] lg:w-[410px] pt-20 left-section">
         <div className="flex items-center gap-2">
           <div className="w-1 h-12 bg-myGreen"></div>
-          <h2 className="lg:text-4xl text-3xl font-bold">About Us</h2>
+          <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-800">About Us</h2>
         </div>
         <div className="w-full flex flex-col sm:gap-6 lg:gap-8 gap-4 pt-4">
           <p className="text-sm xl:text-base">{ABOUT_US_TEXT_PARA_1}</p>
@@ -45,6 +46,7 @@ const About = () => {
           ></img>
         </div>
       </div>
+    </div>
     </div>
   );
 };

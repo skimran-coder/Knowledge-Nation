@@ -23,9 +23,10 @@ const CourseDetails = () => {
   }, [videos, dispatch]);
 
   return (
-    <div className="w-4/5 mx-auto my-12">
+    <div className="w-screen bg-gray-50">
+      <div className="w-4/5 mx-auto py-12">
       <div className="mb-8 grid  md:grid-cols-3 grid-cols-1 justify-between">
-        <div className="md:col-span-2 md:mr-16">
+        <div className="md:col-span-2 md:mr-16 ">
           <h2 className="text-3xl font-bold text-gray-800">
             {course?.courseName}
           </h2>
@@ -61,6 +62,7 @@ const CourseDetails = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };
