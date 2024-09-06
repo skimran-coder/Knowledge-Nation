@@ -14,7 +14,7 @@
 
 - **Frontend**: React.js, Redux, Tailwind CSS
 - **Backend**: Firestore (Firebase)
-- **Deployment**: [Your Deployment Platform]
+- **Deployment**: Firebase Hosting, Vercel
 - **API Integration**: YouTube Data API for fetching and displaying video content
 
 ## Project Structure
